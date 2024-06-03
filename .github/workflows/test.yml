@@ -9,5 +9,7 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo ${{secrets.POP}}
+      - env:
+          TEST_POP: ${{secrets.POP}}
+        run: |
+          echo TEST_POP
