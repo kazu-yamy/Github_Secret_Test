@@ -1,15 +1,16 @@
 name: secret test
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
+    secrets:
+      TEST_POP:
+        required: true
 
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
       - env:
-          TEST_POP: ${{secrets.POP}}
+          TEST_POP: ${{ secrets.POP }}
         run: |
           echo -n $TEST_POP | wc -m
