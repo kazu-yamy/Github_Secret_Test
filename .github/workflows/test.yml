@@ -12,4 +12,4 @@ jobs:
       - env:
           TEST_POP: ${{secrets.POP}}
         run: |
-          echo $TEST_POP
+          echo $TEST_POP | wc -m
