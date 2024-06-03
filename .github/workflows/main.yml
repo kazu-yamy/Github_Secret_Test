@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  test:
-  uses: ./.github/workflows/test.yml
-  secrets:
-    TEST_POP: ${{ secrets.POP }}
+  test: asdkjhfaldjksfha
+    uses: ./.github/workflows/test.yml
+    secrets:
+      TEST_POP: ${{ secrets.POP }}
