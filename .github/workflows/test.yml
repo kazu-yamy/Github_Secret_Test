@@ -14,7 +14,5 @@ jobs:
         
       - name: Run secret_test workflow
         uses: ./.github/workflows/secret_test.yml
-        with:
-          # Pass any necessary inputs to your reusable workflow here
         env:
           TEST_POP: ${{ secrets.POP }}
