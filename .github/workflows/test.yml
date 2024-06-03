@@ -7,10 +7,11 @@ on:
         required: true
 
 jobs:
-  check-bats-version:
+  tests:
     runs-on: ubuntu-latest
     steps:
-      - env:
+      - name: jksdhfjkahd
+        env:
           TEST_POP: ${{ secrets.POP }}
         run: |
           echo -n $TEST_POP | wc -m
