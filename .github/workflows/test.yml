@@ -9,10 +9,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        
       - name: Run secret_test workflow
         uses: ./.github/workflows/secret_test.yml
-        secrets:
-          TEST_POP: ${{ secrets.POP }}
+        with:
+          secrets:
+            TEST_POP: ${{ secrets.POP }}
