@@ -14,6 +14,5 @@ jobs:
         
       - name: Run secret_test workflow
         uses: ./.github/workflows/secret_test.yml
-        with:
-          secrets:
-            TEST_POP: ${{ secrets.POP }}
+        secrets:
+          TEST_POP: ${{ secrets.POP }}
