@@ -1,17 +1,12 @@
-name: secret test
+name: main test
 
 on:
-  workflow_call:
-    secrets:
-      TEST_POP:
-        required: true
+  push:
+    branches:
+      - main
 
 jobs:
-  tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: jksdhfjkahd
-        env:
-          TEST_POP: ${{ secrets.POP }}
-        run: |
-          echo -n $TEST_POP | wc -m
+  test: asdkjhfaldjksfha
+    uses: ./.github/workflows/secret_test.yml
+    secrets:
+      TEST_POP: ${{ secrets.POP }}
